@@ -4,7 +4,7 @@ import axios from 'axios';
 //   baseURL: 'http://localhost:8080/api',
 // });
 const instance = axios.create({
-  baseURL: 'https://college-gatepass-backend.onrender.com/api/auth/register',
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 instance.interceptors.request.use((config) => {
